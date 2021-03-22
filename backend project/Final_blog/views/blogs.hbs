@@ -1,0 +1,173 @@
+<div class="blog-body">
+
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/">BlogginBow</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        {{#if logged}}
+                        <a href="/auth/user">Home</a>
+                        {{else}}
+                        <a href="/">Home</a>
+                        {{/if}}
+                    </li>
+                    <li>
+                        <a href="/about-us">About</a>
+                    </li>
+                    <li>
+                        <a href="/#read-blogs">Read Blogs</a>
+                    </li>
+                    <li>
+                        <a
+                            href="mailto:akki5233@@gmail.com?cc=blogginbowsupport@example.com&subject=Query Regarding BlogginBow">Contact</a>
+                    </li>
+                    <li>
+                        {{#if logged}}
+                        <a href="/auth/user/profile">Profile</a>
+                        {{else}}
+                        <a href="/auth/login">Login</a>
+                        {{/if}}
+                    </li>
+                    <li>
+                        {{#if logged}}
+                        <a href="/auth/logout">Logout</a>
+                        {{else}}
+                        <a href="/auth/signup">Signup</a>
+                        {{/if}}
+
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+
+    <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+        <br><br><br>
+        <center><span style="color:springgreen;">{{msg}}</span></center>
+        <div class="container-fluid blog-show">
+
+            <div class="post">
+                <p class="blogpost-genre">Category: "{{blog.genre}}"
+                </p>
+                <p class="blogpost-meta">Posted by <a href="/auth/author/profile/{{blog.userId._id}}"
+                        style="color: orange;">{{blog.userId.firstName}}</a>
+                    on {{dateLocal blog.date}}</p>
+                <h2 class="blogpost-title">
+                    {{blog.title}}
+                </h2>
+                <p class='blogpost-desc'>
+                    {{{blog.description}}}
+                </p>
+
+                {{{blog.sanitizedHtml}}}
+
+            </div>
+        </div>
+
+
+    </header>
+    <hr>
+    {{!-- COMMENT SECTION - MODAL --}}
+    <ul class="comments">
+
+        {{#each blog.comments}}
+
+        <li>
+            <div class="container-fluid">
+                <div class="comment-section">
+
+                    <h4 class="commenter">Commented by: {{this.name}}</h4>
+
+                    <p class="comment-body">{{this.comment}}</p>
+
+                </div>
+            </div>
+        </li><br>
+        {{/each}}
+    </ul>
+
+    <div class="container-fluid" style="margin-top: 40px;">
+
+        <button type="button" id="comment" class="btn-comment">
+            Add comments
+        </button>
+
+        <div class="bg-modal">
+            <div class="modal-contents">
+                <div class="close">
+                    +
+                </div>
+                <form action="/addcomment/{{blog._id}}" method="POST">
+                    <input type="text" name="name" id="name" placeholder="Your name"><br>
+                    <textarea name="comment" id="comments" cols="30" rows="5"
+                        placeholder="Write your comment"></textarea><br>
+                    <button type="submit" class="btn-comment">Post Comment</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="https://www.linkedin.com/in/akshay-sahu-/" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/akshaysahu5" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/akshay-sahu-au13" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; www.blogginbow.com 2021</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    document.getElementById('comment').addEventListener('click', function () {
+        document.querySelector(".bg-modal").style.display = 'flex'
+    });
+
+    document.querySelector('.close').addEventListener('click', function () {
+        document.querySelector('.bg-modal').style.display = 'none';
+    });
+
+</script>

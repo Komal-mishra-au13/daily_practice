@@ -1,0 +1,139 @@
+{{!-- <div class="container-fluid">
+    <h2>Here are your blogs...</h2>
+
+    <ul>
+        {{#each blogs}}
+        <li>
+            <h1>{{this.title}}</h1><br>
+        </li>
+        <li>{{this.description}}</li><br>
+        <li>{{{this.sanitizedHtml}}}</li>
+        {{/each}}
+
+    </ul>
+
+</div> --}}
+<div class="blog-body">
+
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/">BlogginBow</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/auth/user">Home</a>
+                    </li>
+                    <li>
+                        <a href="/auth/user/profile">Profile</a>
+                    </li>
+                    <li>
+                        <a href="/#read-blogs">Read All Blogs</a>
+                    </li>
+                    <li>
+                        <a
+                            href="mailto:akki5233@@gmail.com?cc=blogginbowsupport@example.com&subject=Query Regarding BlogginBow">Contact
+                            Blogginbow</a>
+                    </li>
+                    <li>
+                        <a href="/auth/profile/writeblog">Write a Blog</a>
+                    </li>
+                    <li>
+                        <a href="/auth/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+        <br><br><br>
+        <ul>
+            {{#each blogs}}
+            <li>
+
+
+                <div class="container-fluid blog-show">
+                    <div class="edit-btn">
+                        <a href="./editblog/{{this._id}}" class="btn btn-primary">Edit</a>
+                    </div>
+                    <div class="deleteblog delete-btn ">
+                        <form action="./deleteblog/{{this._id}}" method="POST"><button type="submit"
+                                class="btn btn-danger">Delete</button></form>
+                        {{!-- <a href="./deleteblog/{{this._id}}" class="btn btn-danger">Delete</a> --}}
+
+                    </div>
+                    <div class="post">
+                        <p class="blogpost-genre">Category: "{{this.genre}}"
+
+                        </p>
+
+                        <p class="blogpost-meta"> <a href="/auth/user/profile/{{user._id}}"
+                                style="color: palegreen;">Posted by you
+                            </a>
+                            on {{dateLocal this.date}}</p>
+                        <a href="/auth/user/userblogs/{{this.id}}" target="_blank">
+                            <h2 class="blogpost-title" style="color: lightcyan;">
+                                {{this.title}}
+                            </h2>
+                            <p class='blogpost-desc'>
+                                {{{this.description}}}
+                            </p>
+                        </a>
+                        {{!-- {{{this.sanitizedHtml}}} --}}
+                    </div>
+                </div>
+            </li>
+            <div class="modal-bg-blog">
+                <div class="modal-contents-blog">
+                    <div class="close closeit">
+                        +
+                    </div>
+                    <form action="/auth/profile/deleteblog/{{this._id}}" method="POST">
+                        <p>Are you sure to delete this blog?</p><br>
+                        <button type="submit" class="yes btn-comment closeit">Yes</button>
+                        <button type="button" class="btn-comment closeit">No</button>
+                        {{!-- <a href="#" class="closeit btn-comment">No</a> --}}
+
+                    </form>
+                </div>
+            </div>
+            {{/each}}
+        </ul>
+
+        <br><br><br>
+    </header>
+
+
+    {{!--
+    <script>
+        document.querySelector('.deleteblog').addEventListener('click', function () {
+            document.querySelector(".modal-bg-blog").style.display = 'flex'
+        });
+
+        document.querySelector('.yes').addEventListener('click', function () {
+            document.querySelector(".blogpost-title").innerHTML = 'DELETED';
+            document.querySelector(".blogpost-genre").innerHTML = 'DELETED';
+            document.querySelector(".blogpost-description").innerHTML = 'DELETED';
+        });
+
+
+        document.querySelector('.closeit').addEventListener('click', function () {
+            document.querySelector('.modal-contents-blog').style.display = 'none';
+        });
+
+    </script> --}}

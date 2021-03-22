@@ -1,0 +1,108 @@
+<div class="profile-body">
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top profile_nav">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/auth/user">BlogginBow</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/auth/user">Home</a>
+                    </li>
+                    <li>
+                        <a href="/auth/user/profile">Back to Profile</a>
+                    </li>
+                    <li>
+                        <a href="/auth/profile/userblogs">Your Blogs</a>
+                    </li>
+                    <li>
+                        <a href="/auth/profile/writeblog">Write a Blog</a>
+                    </li>
+                    <li>
+                        <a href="/auth/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class=" container ">
+        <hgroup>
+            <h2>{{data.msg}}</h2>
+            <h3>Please enter your details to update your profile</h3>
+        </hgroup>
+        <form action=" ./{{user._id}}" method="POST" enctype="multipart/form-data" class="log-form updateinfo">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="contact">Contact</label>
+                    <input type="Number" class="form-control" id="contact" name="contact" placeholder="Phone number"
+                        value="{{info.contact}}">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="About">About</label>
+                    <input type="text" class="form-control" id="About" name="about" placeholder="About"
+                        value="{{info.about}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" name="street" id="inputAddress" placeholder="1234 Main St"
+                    value="{{info.address.street}}">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="searchTextField">City</label>
+                    <input type="text" class="form-control" name="city" id="searchTextField"
+                        value="{{info.address.city}}">
+                </div>
+                <div class=" form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" name="state" class="form-control" value="{{info.address.state}}">
+                        <option selected>Choose...</option>
+                        <option>Assam</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Tamil Nadu</option>
+                        <option>Delhi</option>
+                        <option>Punjab</option>
+                        <option>Gujrat</option>
+                        <option>Jharkhand</option>
+                        <option>Haryana</option>
+                        <option>Chhattisgarh</option>
+                        <option>Orissa</option>
+                        <option>Bihar</option>
+                        <option>Karnataka</option>
+                        <option>Rajasthan</option>
+                        <option>Goa</option>
+                        <option>Kerala</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Maharashtra</option>
+                    </select>
+                </div>
+                <div class=" form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" name="zip" id="inputZip" value="{{info.address.zip}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input type="file" class="" name="dp" id="dp" value="{{info.image}}">
+                    <label class="" for="dp">
+                        Select a profile picture
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+</div>

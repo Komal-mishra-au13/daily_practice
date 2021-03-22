@@ -1,0 +1,103 @@
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="/">BlogginBow</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/about-us">About</a>
+                </li>
+                <li>
+                    <a href="/#read-blogs">Read Blogs</a>
+                </li>
+                <li>
+                    <a
+                        href="mailto:akki5233@@gmail.com?cc=blogginbowsupport@example.com&subject=Query Regarding BlogginBow">Contact</a>
+                </li>
+                <li>
+                    <a href="/auth/login">Login</a>
+                </li>
+                <li>
+                    <a href="/auth/signup">Signup</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        {{!-- <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h2>BlogginBow Login</h2>
+                    <hr class="small">
+                    <span class="subheading">A heaven created solely for writers</span>
+                </div>
+            </div>
+        </div> --}}
+        {{!-- Login form --}}
+        <section>
+
+            <hgroup>
+                <h2 class="msg">{{data.msg}}</h2>
+
+                <h2>BlogginBow Login!</h2>
+                <p>Please enter your details to sign into your account</p>
+                <h2 class='error'>
+                    {{error}}
+                </h2>
+            </hgroup>
+
+            <form action="/auth/login" method="post" class="log-form">
+
+                <div class="group log-input">
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+
+                <div class="group log-input">
+                    <input type="password" id="password" name="password" placeholder="Password">
+                </div>
+
+                <span class="check left-align">
+                    <input type="checkbox" name="admin" id="admin">
+                    <label for="admin">Admin login</label>
+                </span>
+
+                {{!-- <a class="right-align" href="#">Forgot Password</a> --}}
+
+                <br><br>
+
+                <div class="container-log-btn">
+                    <button type="submit" name="btn_submit" class="log-form-btn">
+                        <span>Login</span>
+                    </button>
+                </div>
+
+            </form>
+
+
+
+        </section>
+    </div>
+</header>
+
+<!-- Main Content -->
+<hr>
