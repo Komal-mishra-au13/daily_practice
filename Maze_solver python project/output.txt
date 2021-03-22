@@ -1,0 +1,22 @@
+PROJECT TITLE - MAZE SOLVER
+
+This is the output file , where I am going to explain what will be the 
+output for the given input . 
+
+When we run the code , first it will ask for num of rows . since it work on square matrix .
+so the num of rows = num of columns too.
+
+The output will show like this -
+
+1 0 0 1
+1 1 0 0 
+0 1 1 0
+0 0 1 1
+
+
+So the path will be like this - 
+
+-
+- -
+  - -
+     - -

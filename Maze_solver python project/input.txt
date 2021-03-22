@@ -1,0 +1,32 @@
+PROJECT TITLE - MAZE SOLVER
+
+In this file I am going to explain , what input we have to take for
+correct output.
+
+When we run the code , first it will ask for num of rows . since it work on square matrix .
+so the num of rows = num of columns too.
+
+INPUT EXAMPLE 1. 
+
+Step1:- Suppose we enter - 4 as num of rows so the matrix . So 4 * 4 matrix will form .
+
+Step2:- Now it will ask for 1 row value :
+  1 0 0 1
+
+Step3:- Now row 2 value:
+  1 1 0 0
+
+Step4:- Now row 3 value:
+  0 1 1 0
+
+Step5:- Now Row 4 value:
+  0 0 1 1
+
+In the maze matrix, 0 means the block is a dead end and 1 means the
+block can be used in the path from source to destination. 
+
+
+
+
+
+
