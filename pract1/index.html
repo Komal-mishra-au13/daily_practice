@@ -1,0 +1,34 @@
+<!-- • Create a login form
+• Use fetch to POST the login information to the route:
+https://reqres.in/api/login
+{
+"email": "eve.holt@reqres.in",
+ "password": "cityslicka"
+}
+• If the reponse is 200. Navigate the user to a sample homepage
+• Make sure the navigation method is replace so that no login page history remains. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form action="" method="POST">
+            <input type="email" name="email" id="email" placeholder="Email" value="eve.holt@reqres.in">
+            <input type="password" name="password" id="password" placeholder="Password" value="pistol">
+            <button type="submit" id="login">Login</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
