@@ -56,62 +56,62 @@
 
 ### 1. we can use <React.StrictMode>
 
-reactDOM.render(
-    <React.StrictMode>
-       <App />
-       <Header />
-       <Footer />
-    </React.StrictMode>
-    document.getElementById('roots);
-);
+        reactDOM.render(
+            <React.StrictMode>
+            <App />
+            <Header />
+            <Footer />
+            </React.StrictMode>
+            document.getElementById('roots);
+        );
 
 ### 2. To use Angel bracket <></>
 
-reactDOM.render(
-    <>
-       <App />
-       <Header />
-       <Footer />
-    </>
-    document.getElementById('roots);
-);
+        reactDOM.render(
+            <>
+            <App />
+            <Header />
+            <Footer />
+            </>
+            document.getElementById('roots);
+        );
 
 ### 3. We can use <React.Fragment>
 
-reactDOM.render(
-    <React.Fragment>
-       <App />
-       <Header />
-       <Footer />
-    </React.Fragment>
-    document.getElementById('roots);
-);
+        reactDOM.render(
+            <React.Fragment>
+            <App />
+            <Header />
+            <Footer />
+            </React.Fragment>
+            document.getElementById('roots);
+        );
 
 ### In App.js we can render component inside <Fragment>. This <Fragment> is called Parent component . 
 
-const App = () =>{
-    return(
-        <Fragment>
-          <Header />
-          <Content />
-          <Footer />
-        </Fragment>
-    );
-export default App; 
+        const App = () =>{
+            return(
+                <Fragment>
+                <Header />
+                <Content />
+                <Footer />
+                </Fragment>
+            );
+        export default App; 
 
 #### Here <Header />,<Content /> and <Footer /> are childern of <fragment> component. 
 
 #### In order to see the content of children component we have to make a file Fragment.js in Component folder , in that we have to write - 
 
-const App = (props) =>{
-    return(
-        <div>
-           {props.children}
-        </div>
-    )
-};
+        const App = (props) =>{
+            return(
+                <div>
+                {props.children}
+                </div>
+            )
+        };
 
-export default App;
+        export default App;
 
 #### And in App.js file we have to add 
 
