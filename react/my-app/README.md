@@ -4,7 +4,7 @@
 
 * one way is the simple we can write like -
 
-1.  import React from 'react';
+### 1.  import React from 'react';
 
     class App extends React.Component{
         render(){
@@ -15,7 +15,7 @@
     }
     export default App;
 
-2. import { Component } from 'react';
+### 2. import { Component } from 'react';
 
    class App extends Component{
        render(){
