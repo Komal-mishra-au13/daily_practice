@@ -6,54 +6,55 @@
 
 ### 1.  import React from 'react';
 
-    class App extends React.Component{
-        render(){
-            return(
-                <div>hello</div>
-            )
+        class App extends React.Component{
+            render(){
+                return(
+                    <div>hello</div>
+                )
+            }
         }
-    }
-    export default App;
+        export default App;
 
 ### 2. import { Component } from 'react';
 
-   class App extends Component{
-       render(){
-           return(
-               <div> hello </div>
-           )
-       }
-   }
+        class App extends Component{
+            render(){
+                return(
+                    <div> hello </div>
+                )
+            }
+        }
 
-   export default App;
+        export default App;
 
 ### We can write Function component in two different ways - 
 
 * one way to define function using function keyword -
-1. import React from 'react';
+### 1. import React from 'react';
 
-   function App(){
-       return(
-           <div>Hello</div>
-       )
-   }
+        function App(){
+            return(
+                <div>Hello</div>
+            )
+        }
 
-   export default App;
+        export default App;
 
 *  to use arrow function 
 
-2. import React from 'react';
+### 2. import React from 'react';
 
-   const App = () => {
-       return(
-           <div>Hello</div>
-       )
-   }
-   
-   export default App;
+        const App = () => {
+            return(
+                <div>Hello</div>
+            )
+        }
+        
+        export default App;
 
-# More than One Component render in "index.js" file 
-1. we can use <React.StrictMode>
+## More than One Component render in "index.js" file 
+
+### 1. we can use <React.StrictMode>
 
 reactDOM.render(
     <React.StrictMode>
@@ -64,7 +65,7 @@ reactDOM.render(
     document.getElementById('roots);
 );
 
-2. To use Angel bracket <></>
+### 2. To use Angel bracket <></>
 
 reactDOM.render(
     <>
@@ -75,7 +76,7 @@ reactDOM.render(
     document.getElementById('roots);
 );
 
-3. We can use <React.Fragment>
+### 3. We can use <React.Fragment>
 
 reactDOM.render(
     <React.Fragment>
@@ -87,6 +88,7 @@ reactDOM.render(
 );
 
 ### In App.js we can render component inside <Fragment>. This <Fragment> is called Parent component . 
+
 const App = () =>{
     return(
         <Fragment>
@@ -98,6 +100,7 @@ const App = () =>{
 export default App; 
 
 #### Here <Header />,<Content /> and <Footer /> are childern of <fragment> component. 
+
 #### In order to see the content of children component we have to make a file Fragment.js in Component folder , in that we have to write - 
 
 const App = (props) =>{
