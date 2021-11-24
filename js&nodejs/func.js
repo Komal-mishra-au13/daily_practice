@@ -1,4 +1,4 @@
-//function is a group of code that we can reuse in prog. 
+//(w17 d4)function is a group of statement that perform task on the given statement . we can reuse  in prog. 
 
 //1. function Declaration  - simple function
 
@@ -70,21 +70,18 @@
 
 // 1. TypeII - Pass by reference 
 
-var tv ={
-    ison : "false"
-}
+// var tv ={
+//     ison : "false"
+// }
 
-console.log(tv);
+// console.log(tv);
 
-function turnOn(device){
-    device.ison = "true";
-}
+// function turnOn(device){
+//     device.ison = "true";
+// }
 
-turnOn(tv);
-console.log(tv);
-
-
-
+// turnOn(tv);
+// console.log(tv);
 
 // 2. function expression - it is a type of annonymous function . when we assign function into another variable then it is a function expression. 
 
@@ -141,6 +138,30 @@ console.log(tv);
 // let num = main();
 // console.log(num);
 
+// another eg -
+// function sum(a,b){
+//     return a + b
+// }
+
+// function sub(a,b){
+//     return a - b
+// }
+
+// function solution(c,a,b){  // here c is a func that passed as argument of solution func. 
+//     return c(a,b)
+// }
+
+// console.log(solution(sum,5,8));
+
+var cars = ["Audi","BMW","Swift","Charvolet","BMW"];
+
+function filteritem(items){
+    console.log(items);      // return will return array 
+    return "BMW" === items;  //when the pointer get BMW in cars , it return BMW as an array
+   }
+
+
+console.log(cars.filter(filteritem));
 
 // Closures - A clousure is a fuction which has access to another function from another scope. 
 //A closure provides access of the outer scope of a function to the inner function .
