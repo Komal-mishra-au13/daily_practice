@@ -6,18 +6,26 @@ import Button from './Components/Button/Button';
 
 
 import './App.css';
-
 function App() {
-  return (
+    const  login =(e) =>{
+      console.log('[login]',e);
+    }
+    const  signup =(e) =>{
+      console.log('[signup]',e);
+    }
+    const  logout =(e) =>{
+      console.log('[logout]',e);
+    }
+    return (
       <Fragment>
-        <Content />
-        <Header />
-        <Footer />
-        <Button title="Login"/>
-        <Button title="Signup"/>
-        <Button title="Logout"/>
+          <Content />
+          <Header />
+          <Footer />
+          <Button title="Login" type="success" link="/login" clickevent = {login}/>
+          <Button title="Signup" type="warning" link="/Signup" clickevent = {signup} />
+          <Button title="Logout" type="error" link="Logout" clickevent = {logout} />
       </Fragment>
-  );
-}
+    )
+};
 
 export default App;

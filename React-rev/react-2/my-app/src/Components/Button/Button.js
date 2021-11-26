@@ -1,11 +1,12 @@
 import { Component } from 'react';
+import './button.css';
 
 class Button extends Component{
     render(){
-        console.log(this);
+        // const {type,title,clickevent } = this.props 
         return (
             <div>
-                <button>Click me</button>
+                <button onClick={this.props.clickevent} className ={`btn ${this.props.type}`}>{this.props.title}</button>
             </div>
         )
     }
