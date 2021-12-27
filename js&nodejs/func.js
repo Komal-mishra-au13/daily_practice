@@ -103,8 +103,11 @@
 
 // Arrow function - It is a type of annonymous function and function expression. This is introduced in ES6 .we can write in two ways - 
 
-//1 type 
-// const add = (a,b) => (a+b);
+
+const add = (a,b) => {
+  console.log (a+b);
+}
+add(3,4);
 
 // type2
 // const add = (a,b) =>{
@@ -139,29 +142,29 @@
 // console.log(num);
 
 // another eg -
-// function sum(a,b){
-//     return a + b
-// }
+function sum(a,b){
+    return a + b
+}
 
-// function sub(a,b){
-//     return a - b
-// }
+function sub(a,b){                      
+    return a - b
+}
 
-// function solution(c,a,b){  // here c is a func that passed as argument of solution func. 
-//     return c(a,b)
-// }
+function solution(c,a,b){  // here c is a func that passed as argument of solution func. 
+    return c(a,b);
+}
 
-// console.log(solution(sum,5,8));
+console.log(solution(sum,5,8));
 
-var cars = ["Audi","BMW","Swift","Charvolet","BMW"];
+// var cars = ["Audi","BMW","Swift","Charvolet","BMW"];
 
-function filteritem(items){
-    console.log(items);      // return will return array 
-    return "BMW" === items;  //when the pointer get BMW in cars , it return BMW as an array
-   }
+// function filteritem(items){
+//     console.log(items);      // return will return array 
+//     return "BMW" === items;  //when the pointer get BMW in cars , it return BMW as an array
+//    }
 
 
-console.log(cars.filter(filteritem));
+// console.log(cars.filter(filteritem));
 
 // Closures - A clousure is a fuction which has access to another function from another scope. 
 //A closure provides access of the outer scope of a function to the inner function .

@@ -3,24 +3,24 @@
 // To create a http server
 // express is a node.js framework . 
 
-const  express = require('express');
-const fs = require('fs');
-const app = express(); 
-const PORT = 4000;
-// console.log(app);
+// const  express = require('express');
+// const fs = require('fs');
+// const app = express(); 
+// const PORT = 4000;
+// // console.log(app);
 
-app.get('/',(req,res)=>{
-    console.log("welcome ");
-    res.send("hello world ");  // to send any data to the website 
-})
+// app.get('/',(req,res)=>{
+//     console.log("welcome ");
+//     res.send("hello world ");  // to send any data to the website 
+// })
 
-fs.writeFile('./hello.txt',"hello",(error,data)=>{
-    console.log(data); 
-})
+// fs.writeFile('./hello.txt',"hello",(error,data)=>{
+//     console.log(data); 
+// })
 
-app.listen(PORT,()=>{
-    console.log(`Server running at port ${PORT}`);
-})
+// app.listen(PORT,()=>{
+//     console.log(`Server running at port ${PORT}`);
+// })
 
 
 // GET , POST , PUT , DELETE 
@@ -35,3 +35,18 @@ app.listen(PORT,()=>{
 
 // Fs module - file system - it is a node express module . 
 
+//Promise 
+
+// const task = new Promise((resolve,reject)=>{
+//     resolve('done task 1');
+// });
+// console.log(task);
+// console.log('Anything');
+
+const task1 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve("done task 1");
+    }, 2000)
+});
+console.log(task1);
+console.log('end task');
