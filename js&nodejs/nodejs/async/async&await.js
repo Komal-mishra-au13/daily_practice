@@ -55,36 +55,36 @@ function task3(){
     });
 }
 
-async function taskrunner(){
-    const data1 = await task1();
-    console.log(data1);
-    const data2 = await task2();
-    console.log(data2);
-    const data3 = await task3();
-    console.log(data3);
-    console.log('end task');
-}
-
-taskrunner();
-
-// // CASE-I -> To avoid unhandle promise rejection error while using rej in promise, we use try and catch method in async and await.
-
 // async function taskrunner(){
-//     try{
-//         const data1 = await task1();
-//         console.log(data1);
-//         const data2 = await task2();
-//         console.log(data2);
-//         const data3 = await task3();
-//         console.log(data3);
-//         console.log('end task');
-//     }catch(error){
-//         console.log(error);
-//     }
-
+//     const data1 = await task1();
+//     console.log(data1);
+//     const data2 = await task2();
+//     console.log(data2);
+//     const data3 = await task3();
+//     console.log(data3);
+//     console.log('end task');
 // }
 
 // taskrunner();
+
+// // CASE-I -> To avoid unhandle promise rejection error while using rej in promise, we use try and catch method in async and await.
+
+async function taskrunner(){
+    try{
+        const data1 = await task1();
+        console.log(data1);
+        const data2 = await task2();
+        console.log(data2);
+        const data3 = await task3();
+        console.log(data3);
+        console.log('end task');
+    }catch(error){
+        console.log(error);
+    }
+
+}
+
+taskrunner();
 
 // // CASE-II -> if we will fir take all the task and then do the console.log , then only error got printed like- 
 
