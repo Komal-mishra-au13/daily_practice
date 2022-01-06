@@ -1,4 +1,5 @@
-// Call()- methods call a function with a given "this" value in object and each arguments
+// Call()- methods call a function with a given "this" value in object and each argumentsof function
+
 
 // var emp1 ={
 //     fName : "Komal",
