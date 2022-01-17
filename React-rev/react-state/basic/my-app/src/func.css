@@ -1,0 +1,27 @@
+.btn1{
+    background-color: purple;
+    width:100px;
+    height:50px;
+    border: 2px solid black
+}
+
+.btn2 {
+    background-color: orange;
+    width:100px;
+    height:50px;
+    border: 2px solid black;
+}
+
+.btn3 {
+    background-color:blue;
+    width:100px;
+    height:50px;
+    border: 2px solid black;
+}
+
+.btn4 {
+    background-color:red;
+    width:100px;
+    height:50px;
+    border: 2px solid black;
+}

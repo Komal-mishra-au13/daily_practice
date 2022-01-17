@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  border: 3px solid black;
+  height: 50px;
+  margin-right: 30px;
+  text-align: left;
+}
+
+.login-page ,.signup {
+   border: 3px solid #F3950D;
+  color:black;
+}
+
+.App-header {
+  background-color: #303e5a;
+  max-height: 20%;
+  max-width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+

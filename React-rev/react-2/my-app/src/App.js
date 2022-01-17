@@ -6,8 +6,8 @@ import Button from './Components/Button/Button';
 
 
 import './App.css';
-function App() {
-    const  login =(e) =>{
+ function App() {
+    const  login =(e) =>{               // these are event handler , we define to check the event after clicking on button
       console.log('[login]',e);
     }
     const  signup =(e) =>{
@@ -20,8 +20,8 @@ function App() {
       <Fragment>
           <Content />
           <Header />
-          <Footer />
-          <Button title="Login" type="success" link="/login" clickevent = {login}/>
+          <Footer />                
+          <Button title="Login" type="success" link="/login" clickevent = {login}/>             
           <Button title="Signup" type="warning" link="/Signup" clickevent = {signup} />
           <Button title="Logout" type="error" link="Logout" clickevent = {logout} />
       </Fragment>

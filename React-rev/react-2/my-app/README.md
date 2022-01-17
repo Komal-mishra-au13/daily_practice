@@ -1,4 +1,4 @@
-### In this section we see what is props and how can we use it. Also we learn how to add event handler props as a function and how to call it . 
+###  * In this section we see what is props and how can we use it. Also we learn how to add event handler props as a function and how to call it . 
 
 ## Props - {props} are short for properties and they are used to send data between components. Props are basically a kind of object or global variable. Props are unidirectional (top to bottom)
 
@@ -169,3 +169,8 @@ We cannot pass the props from child to parent ,.
 Ans -> As it is unidirectional, if a parent element has two child elements, then by default, props can be passed
 to both child elements, but the child elements cannot pass to each other as it is already passed down from
 the parent.
+
+### Q. Is there any way to pass the props from child to parent ?
+
+Ans-> Since props are unidirectional , so we can't pass the proprs from child to parent but we can acheive it by defining function. we can pass that function as props (like we pass "clickevent" and called by using event)
+like in App.js -> we make a function and take argument (e) . 

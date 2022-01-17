@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 50px;
+  text-align: left;
+}
+
+.login-page ,.signup {
+   border: 3px solid #F3950D;
+  color:black;
+}
+
+.App-header {
+  background-color: #303e5a;
+  max-height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.footer{
+    margin-top:90%;
+    background-color:#99a6be ;
+    color:rgb(22, 21, 20);
+
+}
+.App-link {
+  color: #61dafb;
+}
+
